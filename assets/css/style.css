@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background-color: #fcfcfc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+    padding: 5px 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+
+header a.menu-list-item {
+    text-decoration: none;
+    color: #933535;
+    font-weight: bold;
+}
+
+div.container {
+    padding: 0 3px;
+}
+
+div.menu-container {
+    display: none;
+}
+
+div.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+div.menu-left, div.menu-right {
+    width: 50%;
+}
+
+div.menu-left {
+    float: left;
+}
+
+div.menu-right {
+    float: right;
+    text-align: right;
+}
+
+#menu-input-control {
+    display: none;
+}
+
+#menu-input-control:checked + label + div.menu-container {
+    display: block;
+}
+
+h1,h2,h3,h4 {
+    color: #444;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.section-text {
+    padding: 5px 10px;
+}
+
+@media (min-width: 960px) {
+
+    div.container {
+        margin: 0 auto;
+        width: 960px;
+    }
+
+    header a.menu-list-item {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align:top;
+        padding: 20px 0 0 0;
+    }
+
+    .menu-input-control {
+        display: none;
+    }
+
+    div.menu-container {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    div.menu-left, div.menu-right {
+        width: 100%;
+        float: none;
+    }
+
+}
