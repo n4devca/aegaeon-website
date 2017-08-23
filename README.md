@@ -1,1 +1,2 @@
 # Aegaeon Website
+git init
