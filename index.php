@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <div class="header-inner">
             <div class="header-image">
 
@@ -122,6 +122,9 @@
             </div>
 
         </div>
+    </div>
+    <div class="helper-top">
+        <a href="#site-header">&#9650; Top</a>
     </div>
 </body>
 </html>
