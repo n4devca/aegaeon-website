@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-CA" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Aegaeon - Open Source OpenID server</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-
-    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-
-    <!-- <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e1ca6d9bb933.png"> -->
-    <meta name="description" content="Aegaeon is an openid / oauth 2.0 server.">
-
-    <script type="text/javascript">
-
-    </script>
-
+   <?php include(__DIR__ . '/partials/head.php');  ?>
 </head>
 <body>
+    <div id="menu">
+        <header>
+            <div class="header-image">
+
+            </div>
+        </header>
+        <?php include(__DIR__ . '/partials/menu.php');  ?>
+    </div>
+    <div id="content">
+        <?php include(__DIR__ . '/partials/contents.php');  ?>
+    </div>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <!--
     <header id="site-header">
         <div class="header-inner">
             <div class="header-image">
@@ -30,7 +32,7 @@
         <div class="container-sections">
 
             <section id="section-what" class="section-text">
-                <h1>What is it?</h1>
+                <h1>What is it? Home</h1>
                 <div>
                     <p>
                         Aegaeon is an OpenID Connect / OAuth 2.0 server implementation using spring boot. The project was originally inspired by mitreid-connect.
@@ -126,5 +128,6 @@
     <div class="helper-top">
         <a href="#site-header">&#9650; Top</a>
     </div>
+    -->
 </body>
 </html>

@@ -1,9 +1,109 @@
 body {
     margin: 0;
-    background-color: #fcfcfc;
+    background-color: #414141;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: #fcfcfc;
 }
 
+header {
+    border-bottom: 1px solid #444;
+    background-color: #2f2f2f;
+}
+
+header > div.header-image {
+    width: 350px;
+    height: 80px;
+    background-image: url('/assets/images/n4dev-aegaeon-logo-5.png');
+}
+
+#menu {
+    color: #fcfcfc;
+    background-color: #313131;
+    border-bottom: 1px solid #444;
+}
+
+
+nav > div.menu-item > a, nav > div.menu-item > div.menu-sub-item > a {
+    display: block;
+    text-decoration: none;
+    color: #fafafa;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+nav > div.menu-item > div.menu-sub-item {
+    display: none;
+}
+
+article {
+    padding: 8px 15px;
+}
+
+article > section:last-of-type {
+    border-bottom: 1px solid #555;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 98%;
+}
+
+.table > thead > tr {
+    background-color: #777;
+}
+
+.table td, .table th {
+    border: 1px solid #555;
+    padding: 5px 8px;
+}
+
+@media (min-width: 1000px) {
+
+    #menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 350px;
+        height: 100%;
+    }
+
+
+    nav > div.menu-item > div.menu-sub-item {
+        display: block;
+        margin-left: 20px;
+    }
+
+    nav > div.menu-item > a, nav > div.menu-item > div.menu-sub-item > a {
+        text-align: left;
+        padding: 10px 8px;
+    }
+
+    #content {
+        margin-left: 350px;
+    }
+}
+
+.code-block {
+    border-left: 4px solid #b73535;
+    padding: 10px 15px;
+    background-color: #555;
+}
+
+.code-block > span.code-caption {
+    display: block;
+    padding: 3px 5px;
+    margin: -10px -15px 5px -15px;
+    background-color: #aaa;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #b73535;
+    font-weight: bold;
+}
+/*
 header {
     border-bottom: 1px solid #ccc;
     background-color: #2f2f2f;
@@ -133,3 +233,4 @@ h2 {
         color: #fff;
     }
 }
+*/
