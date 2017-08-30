@@ -89,7 +89,30 @@
             by your resource server. These tokens are usually created using some cryptographic algorithm.
         </p>
         <p>
-            To properly work, Aegaeon requires you to provide a set of public/private keys.
+            A set of public/private keys is required by Aegaeon to generate these tokens correctly. Future version will include a setup wizard allowing
+            you to create keys automatically but you need to do it by youself currently. Fortunately, there is a convenient project called
+            <a href="https://github.com/mitreid-connect/json-web-key-generator" target="_blank">json-web-key-generator</a> you can use to create your key file.
         </p>
+        <p>
+            Please follow these steps (you can rename mykeys.jwks):
+        </p>
+        <p class="code-block">
+            <span class="code-caption">clone project</span>
+            git clone https://github.com/mitreid-connect/json-web-key-generator.git
+        </p>
+        <p class="code-block">
+            <span class="code-caption">compile sources</span>
+            cd json-web-key-generator && mvn -DskipTests package
+        </p>
+        <p class="code-block">
+            <span class="code-caption">create keys</span>
+            <span>cd target</span>
+            <span>java -jar json-web-key-generator-0.4-SNAPSHOT-jar-with-dependencies.jar -i HMAC -t oct -s 512 -S -o mykeys.jwks</span>
+            <span>java -jar json-web-key-generator-0.4-SNAPSHOT-jar-with-dependencies.jar -i RSA -t RSA -s 2048 -S -o mykeys.jwks</span>
+        </p>
+        <p>
+            Move the jwks file to another folder and note the path.
+        </p>
+
     </section>
 </article>
