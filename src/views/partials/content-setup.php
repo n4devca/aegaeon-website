@@ -113,6 +113,34 @@
         <p>
             Move the jwks file to another folder and note the path.
         </p>
+    </section>
 
+    <section id="section-setup-db">
+        <h2>Database</h2>
+        <div class="message">
+            Installing MariaDB, creating a schema and a user is not covered by this documentation. Please consult MariaDB website if you need help.
+        </div>
+        <p>
+            Database schema are maintained using Flyway (<a href="https://flywaydb.org/" target="_blank">more info here</a>).
+            You can either install flyway to run the SQL files, execute each file by hand or ask Aegaeon to automatically create its schema.
+        </p>
+        <p>The first solution is to use flyway directly:</p>
+        <p class="code-block">
+            flyway -user=your_user -password=your_password -schemas=your_aegaeon_schema -locations=aegaeon_folder/aegaeon-api/src/main/resources/db/mysql migrate
+        </p>
+        <p>If you choose the second solution, you can use mysql command line or a SQL ide.</p>
+        <p>If you want to let aegaeon create the schema automatically, simply add the following argument to tomcat startup script (see below).</p>
+        <p class="code-block">
+            --flyway.enable=false
+        </p>
+    </section>
+
+    <section id="section-setup-tomcat">
+        <h2>Tomcat</h2>
+        <p>You should now have a war file, a jwks key file and an available database schema. Next step is to deploy the build.</p>
+        <p>To start properly, Aegaeon relies on some information you need to add to tomcat's context file. Aegaeon then use jdni to inject
+        these property and complete its initialization.
+        </p>
+        <p></p>
     </section>
 </article>

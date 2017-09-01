@@ -10,9 +10,10 @@
         <h2>Requisites</h2>
         <p>To run Aegaeon, you will need : </p>
         <ul>
-            <li>A MySQL database</li>
-            <li>A java server (I use tomcat)</li>
-            <li>An HTTP server (I use nginx)</li>
+            <li>A java JRE environment</li>
+            <li>A MariaDB database (MySQL is OK)</li>
+            <li>A java server</li>
+            <li>An HTTP server</li>
         </ul>
         <p>PostgreSQL could probably be used instead of MySQL but is untested currently.</p>
     </section>

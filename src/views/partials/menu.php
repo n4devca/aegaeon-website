@@ -24,15 +24,21 @@
         <div class="menu-sub-item">
             <a data-scroll href="#section-setup-keys">Keys</a>
         </div>
+        <div class="menu-sub-item">
+            <a data-scroll href="#section-setup-db">Database</a>
+        </div>
+        <div class="menu-sub-item">
+            <a data-scroll href="#section-setup-tomcat">Tomcat</a>
+        </div>
     </div>
 
     <div class="menu-item">
         <a data-scroll href="#section-styling">Styling</a>
         <div class="menu-sub-item">
-            <a data-scroll href="#section-styling-element">Element Styling</a>
+            <a data-scroll href="#section-styling-sheet">Custom Stylesheet</a>
         </div>
         <div class="menu-sub-item">
-            <a data-scroll href="#section-styling-sheet">Custom Sheet</a>
+            <a data-scroll href="#section-styling-element">Element's Styling</a>
         </div>
     </div>
 
