@@ -1,0 +1,19 @@
+site_name: Aegaeon Server
+site_url: https://www.aegaeon.ca
+repo_url: https://github.com/n4devca/aegaeon
+edit_uri: ''
+site_description: Aegaeon Server documentation
+site_author: Remi Guillemette
+copyright: Remi Guillemette
+extra_css:
+    - css/aegaeon.css
+nav:
+    - Installation:
+        - Getting Started: getting_started.md
+        - Tools: tools.md
+        - Databases: databases.md
+        - Tomcat Installation: install-tomcat.md
+        - JSON Web Keys: keys.md
+        - Configuration: configuration.md
+    - Download: download.md
+    - FAQ: faq.md

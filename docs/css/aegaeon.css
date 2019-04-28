@@ -1,0 +1,118 @@
+body::before {
+    background-image: none;
+}
+
+body {
+    background-color: #fafafa;
+    color: #000;
+}
+
+.navbar {
+    background-color: #fafafa;
+    background-image: none;
+    color: #095bb7;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #095bb7;
+}
+
+.navbar-header > .navbar-brand, .navbar-default .navbar-brand:hover {
+    color: #095bb7;
+}
+
+.bs-sidebar.well {
+    background-color: #fafafa;
+    border:0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.bs-sidebar.well > ul > li > a {
+    font-size: 1.2em;
+}
+
+
+body {
+    background: url(/img/background-small.svg) no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-header {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 80px;
+}
+
+.is-no-padding {
+    padding-top: 0;
+}
+
+.is-center {
+    text-align: center;
+}
+
+.intro-title {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.main-logo {
+    width: 100px;
+    height: 100px;
+}
+
+div[role="main"] {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding:1em;
+    color: #fff;
+    margin: 1em 0;
+}
+
+div[role="main"] h1, div[role="main"] h2, div[role="main"] h3 {
+    color: #fff;
+}
+
+div[role="main"] .table {
+    background-color: #fff;
+    color:#000;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        background: url(/img/background-mid.svg);
+    }
+
+    .home-content-inner {
+        width: 750px;
+        margin:0 auto;
+        padding: 1em;
+    }
+
+    .main-logo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1005px) {
+
+    body {
+        background: url(/img/background-full.svg);
+    }
+
+
+    .home-content-inner {
+        width: 950px;
+        margin:0 auto;
+        padding: 1em;
+    }
+
+}
