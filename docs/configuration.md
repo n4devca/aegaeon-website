@@ -25,17 +25,17 @@ There is multiple way to set these flags: command line, tomcat **Environment** v
 | aegaeon.modules.oauth | Enable OAuth token endpoint.<sup>4</sup> | No | true or false | true |
 
 
-**<sup>1</sup>** Information endpoint is used by client to request how they should interact with your server. More information here: [https://openid.net/specs/openid-connect-discovery-1_0.html](https://openid.net/specs/openid-connect-discovery-1_0.html)
+**<sup>1</sup>** Information endpoint is used by client to know how they should interact with your server. More information here: [https://openid.net/specs/openid-connect-discovery-1_0.html](https://openid.net/specs/openid-connect-discovery-1_0.html)
 
-**<sup>2</sup>** Introspect allow resource server to validate access token without parsing them. More information here: [file:///home/rguillemette/dev/RFC/RFC%207662%20-%20OAuth%202.0%20Token%20Introspection.html](file:///home/rguillemette/dev/RFC/RFC%207662%20-%20OAuth%202.0%20Token%20Introspection.html)
+**<sup>2</sup>** Introspect endpoint allows resource server to validate access token without parsing them. More information here: [https://tools.ietf.org/html/rfc7662](https://tools.ietf.org/html/rfc7662)
 
-**<sup>3</sup>** You could technically delegate the login to another third party system and use Aegaeon simply as a token provider. Not implemeted yet.
+**<sup>3</sup>** You could technically delegate the login to another third party system and use Aegaeon as a simple token provider. Not implemeted yet.
 
 **<sup>4</sup>** You could technically disable the token endpoint completely leaving only implicit flow from authorization endpoint.
 
 ## Example
 
-Here is an example using tomcat's environment variable in context.xml file
+Here is an example using tomcat's environment variable in the context.xml file:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

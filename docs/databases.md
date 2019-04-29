@@ -1,21 +1,22 @@
 # Database
 
 Aegaeon needs a relational database to work properly.
-Current Aegaeon release only supports MySQL 5.7 and PostgreSQL 11 but other databases may be used if you are willing to adapt
-model creation script (contributions are welcome).
+Currently, only MySQL 5.7 and PostgreSQL 11 are supported but another database may be used if you are willing to adapt
+model creation scripts (contributions are welcome).
 
-The recipes below are simple database setup with a single user. There are multiple way to setup Aegaeon and mostly depends on your
-infrastructure requirements, security and ressources. Being your user's repository and authorization mechanism, you should consider
-carefully your user, schema and deployment model.
+The recipe below is a simple database setup with a single user. There are multiple ways to setup Aegaeon and mostly depends on your
+infrastructure requirements, security and ressources.
+
+You should consider always carefully your plan your users, schema and deployment model.
 
 Whatever database you may choosed, you will need to apply each database revision files in order.
-If you look into release archive, you will find SQL scripts named:
+If you look into release archive, you will find SQL scripts named like this:
 
 ```
 VX.Y.Z__Description.sql
 ```
 
-Where **X.Y** is Aegaeon's release and **Z** the database script number. SQL files need to be applied in order.
+**X.Y** is Aegaeon's release number and **Z** the database script number. SQL files need to be applied in order.
 You can apply each file manually with your favorite SQL client or used flyway, a version control tool for your database.
 
 More information here: [https://flywaydb.org/](https://flywaydb.org/)
@@ -35,7 +36,7 @@ From there, create one user:
 
 Change 'password' and note it for later.
 
-Create a schema for Aegaeon and grant permissions to the your user created previously:
+Create a schema for Aegaeon and grant necessary permissions to the your user:
 
     CREATE DATABASE aegaeon_db DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
     GRANT ALTER, CREATE, EXECUTE, DELETE, DROP, INDEX, INSERT, SELECT, TRIGGER, UPDATE ON aegaeon_db.* TO 'aegaeon_server'@'localhost';
@@ -46,20 +47,20 @@ Finally, you can connect to your new database:
     $ mysql -u aegaeon_server -p aegaeon_db
 
 The last step is to apply each SQL revision file you may find in sql/mysql folder in aegaeon release archive.
-Connect to your database with aegaeon_server user and run each file in the proper sequence.
+Connect to your database with aegaeon_server user and run each file in the right sequence.
 
 ## PostgreSQL
 
 Aegaeon is tested with PostgreSQL 11 but should also work with older versions.
 
-First, connect to your PostgreSQL database with a user having enough permissions to create role, database and schema.
+First, connect to your PostgreSQL database with a user having enough permissions to create roles, databases and schemas.
 
 Then, create a database and connect to it:
 
     create database aegaeon_db;
     \c aegaeon_db
 
-We will create a role and a schema for Aegaeon. The model and data will be contain in this schema.
+We will create a role and a schema for Aegaeon. The model and data will be contained in this schema.
 
     CREATE ROLE aegaeon_server with LOGIN PASSWORD 'password';
     GRANT connect on database aegaeon_db to aegaeon_server;
@@ -72,6 +73,6 @@ Finally, you can connect to your new schema:
 
     $ psql -U aegaeon_server -d aegaeon_db
 
-The last step is to apply each SQL revision file you may find in sql/mysql folder in aegaeon release archive.
-Connect to your database with aegaeon_server user and run each file in the proper sequence.
+The last step is to apply each SQL revision file you may find in sql/postgresql folder in aegaeon release archive.
+Connect to your database with aegaeon_server user and run each file in the right sequence.
 

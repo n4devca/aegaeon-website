@@ -1,16 +1,18 @@
 # JWK Keys
 
-To work properly, Aegaeon needs JSON Web Keys (JWK).
-These keys are used to generate the id and access tokens given to client after a successful authorization.
+Aegaeon relies on JSON Web Keys (JWK) to generate the *ID* and *Access token* given to clients after a successful authorization by one of your user.
 
-To generate it, you can use one of these:
+JSON Web Keys can be created with:
 
 - an command line key generator [https://github.com/mitreid-connect/json-web-key-generator](https://github.com/mitreid-connect/json-web-key-generator)
 - an online version available at [https://mkjwk.org/](https://mkjwk.org/)
 
-My suggestion is :
+My suggestion is:
 
 - Use the online key generator for development and test.
 - Use the offline / stand alone key generator to create keys used by your production instance.
 
 Either way, generate your web keys and move the resulting file somewhere safe.
+
+See here for more informations:
+[https://connect2id.com/products/nimbus-jose-jwt/algorithm-selection-guide](https://connect2id.com/products/nimbus-jose-jwt/algorithm-selection-guide)

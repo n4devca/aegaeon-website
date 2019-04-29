@@ -1,10 +1,10 @@
 # Frequently Asked Questions
 
-1. What is needed to install and run Aegaeon?
+1. What do I need to install and run Aegaeon?
 
-    You needs java JDK 8, a database (MySQL or PostgreSQL) and a java application server (tomcat, jetty, etc).
+    You need a java JDK 8, a database (MySQL or PostgreSQL) and a java application server (tomcat, jetty, etc).
 
-2. How much memory is it needed to run Aegaeon ?
+2. How much memory is needed to run Aegaeon ?
 
     It depends on how many users and applications you plan to support. Minimally, you will need 512 mb assigned to your JVM.
 
@@ -20,10 +20,14 @@
 
     Sure! If you do, please contribute your Docker file.
 
-6. Which OpenID / OAuth flow is supported ?
+6. Can I run Aegaeon in production ?
+
+    I would not recommend it. Aegaeon is still under development and is not considered stable yet.
+
+7. Which OpenID / OAuth flow is supported ?
 
     The following flows are supported: Implicit, Authorization code, refresh token and client credential.
 
-7. I found a bug / I want to contribute!
+8. I found a bug / I want to contribute!
 
-    Contribution and bug reports are welcome! Please open an issue on Github.
+    Contribution and bug reports are welcome! Please open an issue on [Github](https://github.com/n4devca/aegaeon/issues).
