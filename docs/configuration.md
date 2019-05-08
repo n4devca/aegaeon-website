@@ -2,7 +2,7 @@
 
 Aegaeon has multiple configuration flags allowing you to enable or disable parts of the server.
 
-There is multiple way to set these flags: command line, tomcat **Environment** variable, custom application.yml, etc.
+There are many ways to set these flags: command line, tomcat **Environment** variable, custom application.yml, etc.
 
 ## Flags
 
@@ -10,7 +10,7 @@ There is multiple way to set these flags: command line, tomcat **Environment** v
 | ---- | ----------- | --------- | ------ | ------- |
 | aegaeon.jwks | JSON Web Keys (JWK) to use. | Yes | String (/path/to/your/keys.jwks) | - |
 | aegaeon.info.serverName | The name and title of this server. | No | String | Aegaeon |
-| aegaeon.info.issuer | Identity your authorization server. | Yes | String/URL | - |
+| aegaeon.info.issuer | Identity of your authorization server. | Yes | String/URL | - |
 | aegaeon.info.logoUrl| Your server's logo. | No | String/URL | None |
 | aegaeon.info.legalEntity | The legal entity behind this server. | No | String | None |
 | aegaeon.info.privacyPolicy | Your privacy policy. | No | String/URL | None |
@@ -19,7 +19,7 @@ There is multiple way to set these flags: command line, tomcat **Environment** v
 | aegaeon.modules.admin | Enable openid client configuration page. | No | true or false | true |
 | aegaeon.modules.createaccount | Enable user sign-up page. | No | true or false | true |
 | aegaeon.modules.home| Enable Aegaeon's homepage. If this value is false, login page is the home page. | No | true or false | false |
-| aegaeon.modules.information | Enable information and configuration endpoint.<sup>1</sup> | No | true or false | true |
+| aegaeon.modules.information | Enable information and configuration endpoints.<sup>1</sup> | No | true or false | true |
 | aegaeon.modules.introspect | Enable OAuth 2.0 introspect endpoint.<sup>2</sup> | No | true or false | false |
 | aegaeon.modules.login | Enable user's login page.<sup>3</sup> | No | true or false | true |
 | aegaeon.modules.oauth | Enable OAuth token endpoint.<sup>4</sup> | No | true or false | true |

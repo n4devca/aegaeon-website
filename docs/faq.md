@@ -2,7 +2,7 @@
 
 1. What do I need to install and run Aegaeon?
 
-    You need a java JDK 8, a database (MySQL or PostgreSQL) and a java application server (tomcat, jetty, etc).
+    You need java 8, a database (MySQL or PostgreSQL) and a java application server (tomcat, jetty, etc).
 
 2. How much memory is needed to run Aegaeon ?
 
@@ -12,7 +12,7 @@
 
     Aegaeon is available under the Apache 2.0 license. It is free and open source. You can read the license [here](license.md).
 
-4. Can I run multiple instance of Aegaeon (cluster) ?
+4. Can I run multiple instances of Aegaeon (clustering) ?
 
     Current alpha does not support clustering. Clustering is plan for next beta release.
 

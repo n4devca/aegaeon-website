@@ -7,9 +7,9 @@ model creation scripts (contributions are welcome).
 The recipe below is a simple database setup with a single user. There are multiple ways to setup Aegaeon and mostly depends on your
 infrastructure requirements, security and ressources.
 
-You should consider always carefully your plan your users, schema and deployment model.
+You should always carefully consider your users, schema and deployment model.
 
-Whatever database you may choosed, you will need to apply each database revision files in order.
+Whatever database you may choose, you will need to apply each database revision files in the right order.
 If you look into release archive, you will find SQL scripts named like this:
 
 ```
@@ -24,9 +24,9 @@ More information here: [https://flywaydb.org/](https://flywaydb.org/)
 
 ## MySQL
 
-Aegaeon is tested with MySQL 5.7 but should also work on older versions or with other MySQL compatibles projects like MariaDB and Percona Server.
+Aegaeon is tested with MySQL 5.7 but should also work on older versions or with other MySQL compatible projects like MariaDB and Percona Server.
 
-First, connect to your database as root or with a user with enough permissions to create users, schemas and grant permissions.
+First, connect to your database as root:
 
     $ mysql -u root -p
 
@@ -46,7 +46,7 @@ Finally, you can connect to your new database:
 
     $ mysql -u aegaeon_server -p aegaeon_db
 
-The last step is to apply each SQL revision file you may find in sql/mysql folder in aegaeon release archive.
+The last step is to apply each SQL revision files you may find in /model/mysql folder in aegaeon release archive.
 Connect to your database with aegaeon_server user and run each file in the right sequence.
 
 ## PostgreSQL
@@ -73,6 +73,6 @@ Finally, you can connect to your new schema:
 
     $ psql -U aegaeon_server -d aegaeon_db
 
-The last step is to apply each SQL revision file you may find in sql/postgresql folder in aegaeon release archive.
+The last step is to apply each SQL revision file you may find in /model/postgresql folder in aegaeon release archive.
 Connect to your database with aegaeon_server user and run each file in the right sequence.
 

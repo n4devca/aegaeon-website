@@ -18,7 +18,7 @@ Add a jdbc connection to your database. It sould look like this:
           url="jdbc:mysql://localhost:3306/aegaeon_db"/>
 
 <p class="alert alert-info">
-    The resource above use MySQL driver. If you are using PostgreSQL, you need to use a different driver. This is a very minimal
+    The resource above use MySQL driver. If you are using PostgreSQL, you will need to use a different driver. This is a very minimal
     jdbc connection setup. I highly recommend to check tomcat's connection pool documentation to setup the maximum number of connections
     and other important properties of your database connection.
 </p>
